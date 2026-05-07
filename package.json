@@ -1,0 +1,19 @@
+{
+  "name": "team-workspace-app",
+  "version": "1.0.0",
+  "description": "A full-stack project management tool built with MERN",
+  "scripts": {
+    "setup:backend": "cd server && npm install",
+    "setup:frontend": "cd client && npm install",
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "build:frontend": "cd client && npm run build",
+    "build": "npm run setup && npm run build:frontend",
+    "start": "cd server && node server.js",
+    "start:backend": "cd server && npm run dev",
+    "start:frontend": "cd client && npm run dev",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
